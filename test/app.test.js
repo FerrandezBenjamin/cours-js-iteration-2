@@ -108,7 +108,7 @@ test('la fonction objects_serials renvoie une liste avec les serials de tous les
     assert.equal(typeof d, 'object');
     assert.equal(Object.keys(d).length,1);
     assert.equal(Object.keys(d)[0],'objects');
-    assert.equal(typeof d.objects[0], 'strings');
+    assert.equal(typeof d.objects[0], 'string');
     assert.equal(d.objects.indexOf('OBJ_000'), -1);
     assert.notEqual(d.objects.indexOf('OBJ_001'), -1);
     assert.notEqual(d.objects.indexOf('OBJ_005'), -1);
