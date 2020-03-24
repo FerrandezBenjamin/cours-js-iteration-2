@@ -28,7 +28,10 @@ function demarrage(){
   * Elle retourne un objet javascript au format json.
   */
 function home(){
-    return JSON;
+    return {
+        "oui": "oui"
+    };
+
 }
 
  /**
@@ -38,7 +41,9 @@ function home(){
   * Elle retourne un objet javascript contenant toutes les données.
   */
 function donnees(){
-    return {};
+    
+    return data;
+    
 }
 
  /**
