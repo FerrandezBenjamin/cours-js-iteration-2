@@ -68,7 +68,9 @@ function comms(){
   * Cette liste sera contenue dans la clé objects
   */
 function objects(){
-    return {"objects":['data', 'public']};
+    var liste = {"objects":data.objects};
+    // console.log(liste);
+     return liste;
 }
 
  /**
@@ -80,7 +82,12 @@ function objects(){
   * Cette liste sera contenu dans la clé types
   */
 function types(){
-    return undefined;
+    var obj = data.types;
+    var type = [];
+    for (var p in obj){
+        type.push(obj[p]);
+    }
+    return {"types" : type};
 }
 
 /**
@@ -92,7 +99,12 @@ function types(){
  * Cette liste sera contenu dans la clé formats.
  */
 function formats(){
-   return undefined;
+    let i = data.data_formats;
+    let tableau = [];
+    for (var p in i ){
+       tableau.push(i[p]);
+    }
+    return {"formats" : tableau};
 }
 
  /**
@@ -104,7 +116,15 @@ function formats(){
   * Cette liste sera contenue dans la clé objects
   */
 function objects_serials(){
-    return {"objects":[]};
+    let w = data.objects;
+    let leSerials = [];
+    for (let p in w)
+    {
+      console.log(w [p].serial);
+      leSerials.push(w[p].serial);
+    }    
+
+    return {"objects":leSerials};
 }
 
 /**
@@ -115,7 +135,16 @@ function objects_serials(){
  * l'objet ayant le serial passé en paramètre.
  */
 function get_object_by_serial(serial){
-    return serial;
+    let w = data.objects;
+    let leSerials = [];
+    for (let p in w)
+        if (p.serial)
+        {
+            return leSerials.push(w[leSerials]);
+        }
+
+    return {"objects":["serial"]};
+    // return serial;
 }
 
 /**
