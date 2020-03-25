@@ -152,7 +152,21 @@ function get_object_by_serial(serial){
  * liste des objets ayant l'opérateur passé en paramètre.
  */
 function get_objects_by_operator(operator){
-    return operator;
+    let obj = data.objects;
+    let tab =[];
+        for (i=0; i<obj.length;i++)
+        {
+            if (obj[i].provisionning.operator === operator)
+            {
+                tab.push(obj[i]);
+            }
+        }
+    if (tab.length==0)
+    {
+        return undefined;
+    }
+
+    return {"objects" : tab};
 }
 
 /**
@@ -163,7 +177,20 @@ function get_objects_by_operator(operator){
  * ayant pour mode de communication celui passé en paramètre.
  */
 function get_types_by_comm(comm){
-    return comm;
+    let obj = data.types;
+    let tab =[];
+        for (i in obj)
+        {
+            if (obj[i].communication == comm)
+            {
+                tab.push(obj[i].communication);
+            }
+        }
+    if (tab.length==0)
+    {
+        return undefined;
+    } 
+    return {"types" : tab};
 }
 
 /**
