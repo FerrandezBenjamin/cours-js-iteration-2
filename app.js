@@ -120,7 +120,7 @@ function objects_serials(){
     let leSerials = [];
     for (let p in w)
     {
-      console.log(w [p].serial);
+    //   console.log(w [p].serial);
       leSerials.push(w[p].serial);
     }    
 
@@ -136,15 +136,12 @@ function objects_serials(){
  */
 function get_object_by_serial(serial){
     let w = data.objects;
-    let leSerials = [];
-    for (let p in w)
-        if (p.serial)
+    for (p=0 ; p<w.length; p++){
+        if (w[p].serial == serial)
         {
-            return leSerials.push(w[leSerials]);
+            return w[p];
         }
-
-    return {"objects":["serial"]};
-    // return serial;
+    }    
 }
 
 /**
