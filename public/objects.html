@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/static/adminlte/dist/css/adminlte.min.css">
+    <!-- Ma page CSS-->
+    <link rel="stylesheet" href="objects.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
@@ -20,7 +22,13 @@
 <!----------------------METHODE NUMERO 1-------------------->
 <!-- <body onload="load_components()"> -->
     <body>
-    
+        <!-- <img src="background.jpg" class="img-fluid" alt="Responsive image"> -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>HEEEEEEEEEY</strong> salut  t'es sur le page de Ben tavu
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
     <div class="wrapper" id="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light" id="nav">
@@ -34,7 +42,7 @@
         </nav>
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4" id="side">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" class="" id="side">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
                 <img src="/static/images/le-campus.jpg" alt="Logo Campus" class="brand-image elevation-3"
@@ -61,7 +69,7 @@
                                 <li class="nav-item">
                                   <a href="/examples/modal.html" class="nav-link">
                                     <i class="fas fa-pager nav-icon"></i>
-                                    <p>Modale</p>
+                                    <p>Modele</p>
                                   </a>
                                 </li>
                                 <li class="nav-item">
@@ -81,7 +89,7 @@
         <div class="content-wrapper" id="content">
             <section class="content-header">
                 <div class="container-fluid">
-                    <h1 id="content_title">Gestion du parc d'objets</h1>
+                    <h1 id="content_title" class="text-danger">Gestion du parc d'objets</h1>
                 </div>
             </section>
 
@@ -92,9 +100,9 @@
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="box-title">Liste des objets</h3>
+                                <button class="btn btn-dark" onclick='load_components()'>Raffraichir la liste des objets</button>
                             </div>
-                            <div class="card-body">
-                                <!-- <button onclick='load_components()'>hehe je suis un bouton</button> -->
+                            <div class="card-body" class="">
                                 <table id="objects_table" class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -104,6 +112,13 @@
                                             <th style="width: 100px">Statut</th>
                                             <th style="width: 100px">Action</th>
                                         </tr>
+                                        <!-- <tr>
+                                            <th style="width: 100px"> OBJ_001 </th>
+                                            <th>image</th>
+                                            <th> Capteur de température et d'humidité de la salle de cours du campus Numérique </th>
+                                            <th style="width: 100px"><input type ="checkbox"></th>
+                                            <th style="width: 100px"><button class="btn-primary">Abonne toi</button></th>
+                                        </tr> -->
                                     </thead>
                                     <tbody id="table_body">
                                         <!--
