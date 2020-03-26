@@ -10,3 +10,5 @@ function load_components(){
     // Ajouter ici le code permettant de charger dynamiquement les éléments de la page
 }
 
+load_components();
+

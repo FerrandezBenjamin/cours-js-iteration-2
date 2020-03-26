@@ -201,7 +201,20 @@ function get_types_by_comm(comm){
  * ayant pour un format de données celui passé en paramètre.
  */
 function get_types_by_format(format){
-    return format;
+    let obj = data.data_formats;
+    let tab =[];
+        for (i in obj)
+        {
+            if (obj[i].temperature == format)
+            {
+                tab.push(obj[i].temperature);
+            }
+        }
+    if (tab.length==0)
+    {
+        return undefined;
+    } 
+    return {"types" : tab};
 }
 
 /**
