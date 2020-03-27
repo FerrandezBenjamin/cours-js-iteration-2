@@ -7,7 +7,7 @@
             "description": "Capteur de température et d'humidité de la salle de cours du Campus de Chambéry",
             "location": "45.644065, 5.867810",
             "refresh": 5,
-            "status": true,
+            "status": false,
             "provisionning":{
                 "date": "2020-03-20",
                 "operator": "JPA"
