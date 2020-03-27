@@ -21,7 +21,7 @@
 </head>
 <!----------------------METHODE NUMERO 1-------------------->
 <!-- <body onload="load_components()"> -->
-    <body>
+    <body onload="load_components()">
         <!-- <img src="background.jpg" class="img-fluid" alt="Responsive image"> -->
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>HEEEEEEEEEY</strong> salut  t'es sur le page de Ben tavu
@@ -100,7 +100,7 @@
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="box-title">Liste des objets</h3>
-                                <button class="btn btn-dark" onclick='load_components()'>Raffraichir la liste des objets</button>
+                                <button class="btn btn-dark" onclick='refresh()'>Raffraichir la liste des objets</button>
                             </div>
                             <div class="card-body" class="">
                                 <table id="objects_table" class="table table-bordered">

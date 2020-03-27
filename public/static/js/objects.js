@@ -13,21 +13,29 @@ function load_components() {
   });
 }
 
-function add_line_table(data) {
-  
-  let checked ="";
+function refresh() {
+  // 1 = vider la table
+  // 2 = remplir la table 
+  document.getElementById('table_body').innerHTML = "";
+  load_components();
+  console.log(document.getElementById('table_body').innerHTML);
+}
 
-    if (data.status){
-      checked = "checked";
-    } else{
-       checked = "";
-    }
+function add_line_table(data) {
+
+  let checked = "";
+
+  if (data.status) {
+    checked = "checked";
+  } else {
+    checked = "";
+  }
 
   let line = ' <tr>\
-  <th style="width: 100px">'+data.serial+'</th>\
-    <th><img style="max-width:30%; heigth:10%;" src=" static/images/'+data.image+'"></th>\
-    <th>'+data.description+'</th>\
-    <th style="width: 100px"><input type ="checkbox" '+checked+'></th>\
+  <th style="width: 100px">'+ data.serial + '</th>\
+    <th><img style="max-width:30%; heigth:10%;" src=" static/images/'+ data.image + '"></th>\
+    <th>'+ data.description + '</th>\
+    <th style="width: 100px"><input type ="checkbox" '+ checked + '></th>\
     <th style="width: 100px"><button class="btn-primary"></button></th>\
     </tr>'
 
