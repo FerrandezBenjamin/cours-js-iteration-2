@@ -37,15 +37,18 @@ function add_line_table(data) {
 
   let line = ' <tr>\
   <th style="width: 100px">'+ data.serial + '</th>\
-    <th><img style="max-width:30%; heigth:10%;" src=" static/images/'+ data.image + '"></th>\
+    <th><img style="max-width:50%; heigth:10%;" src=" static/images/'+ data.image + '"></th>\
     <th>'+ data.description + '</th>\
     <th style="width: 100px"><input type ="checkbox" '+ checked + '></th>\
     <th style="width: 100px"><button class="btn-primary"></button></th>\
     </tr>'
 
-  // $('#table_body').append(line); Façon Jquery !
+// façon Jquery : 
+  $('#table_body').append(line);
 
-  document.getElementById('table_body').innerHTML += line;
+/// Façon "javascript" : 
+
+  // document.getElementById('table_body').innerHTML += line; 
 }
 
 function addImage(data_objects){
@@ -53,7 +56,7 @@ function addImage(data_objects){
     for (let i of document.getElementById('table_body').childNodes) {
       if (i.nodeName == 'TR') {
         if (i.childNodes[1].childNodes[0].textContent == data_objects.serial) {
-          i.childNodes[3].childNodes[0].setAttribute('src', '/static/images/' +data.types.Digital_CO2.default_image);;
+          i.childNodes[3].childNodes[0].setAttribute('src', '/static/images/' +data.types[data_objects.type].default_image);;
         }
       }
     }
